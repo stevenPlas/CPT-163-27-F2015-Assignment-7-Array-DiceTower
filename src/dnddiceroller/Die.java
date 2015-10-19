@@ -1,12 +1,32 @@
 package dnddiceroller;
+import java.util.Random;
 
 /**
- * A Die is a many sided object that when rolled provides a random value from
- * 1 through the number of sides on the object. Some dice are 6 sided and have
- * the numbers 1-6 on them. Some dice are 20 sided with the numbers 1-20 on them.
- * Others are called fudge dice and have the values of -1 0 or +1
- * @author Paul Scarrone
+ * @author Steven Plas
  */
 public class Die {
-  
+    
+    private final int sides;
+    private int value;
+
+    /**
+     *
+     * @param Sides
+     */
+    public Die(int Sides) {
+        this.sides = Sides;
+        
+    }
+
+    public double getValue() {
+        return this.value;
+    }
+
+
+    public void roll(){
+        Random rand = new Random();
+        value = rand.nextInt(this.sides) + 1;
+    }
+    
 }
+
