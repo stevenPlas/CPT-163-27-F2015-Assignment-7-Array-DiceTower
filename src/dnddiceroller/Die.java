@@ -13,19 +13,19 @@ public class Die {
      *
      * @param Sides
      */
-    public Die(int Sides) {
-        this.sides = Sides;
+    public Die(int sides) {
+        this.sides = sides;
         
     }
 
-    public double getValue() {
+    public int getValue() {
         return this.value;
     }
 
 
     public void roll(){
         Random rand = new Random();
-        value = rand.nextInt(this.sides) + 1;
+        this.value = rand.nextInt(this.sides) + 1;
     }
     
 }

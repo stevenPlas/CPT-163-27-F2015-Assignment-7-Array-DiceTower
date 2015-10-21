@@ -7,27 +7,28 @@ import java.util.List;
  * @author Steven Plas
  */
 public class DiceTower {
-  final int PANEL_COUNT = 3;
-  List<Die> dice;
+  private final int PANEL_COUNT = 3;
+  private List<Die> dice;
   private int dieSum;
 
   public DiceTower() {
 	this.dice = new ArrayList();
-        dieSum = 0;
+        this.dieSum = 0;
   }
   
   public DiceTower(List dice){
 	this.dice = dice;
-        dieSum = 0;
+        this.dieSum = 0;
   }
   
   public int getDieSum(){
-      return dieSum;
+      return this.dieSum;
   }
   
   public void dropDice() {
-       int i = 0;
-       for (Die die : dice){
+      
+      int i = 0;
+       for  (Die die : dice){
            
            dice.stream().forEach((_item) -> {
                die.roll();
